@@ -20,8 +20,15 @@ const paymentRoutes = require("../routes/paymentRoutes");
 const donateRoutes = require("../routes/donationRoutes");
 const app = express();
 
-app.use(cors());
 
+app.use(cors({
+    origin: [
+        "https://venerable-speculoos-d0ba48.netlify.app",
+        "http://localhost:3000"
+    ],
+    methods: "GET,POST,PUT,DELETE,PATCH",
+    credentials: true
+}));
 
 app.use(express.json());
 

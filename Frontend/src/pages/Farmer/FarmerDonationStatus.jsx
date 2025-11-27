@@ -13,7 +13,7 @@ const FarmerDonationStatus = () => {
         const token = localStorage.getItem("token");
 
         const res = await axios.get(
-          "http://localhost:5000/api/donation/my-donations",
+          "https://farmer-final-bkp2.onrender.com/api/donation/my-donations",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -158,7 +158,7 @@ const FarmerDonationStatus = () => {
                     {item.images.map((img, idx) => (
                       <motion.img
                         key={idx}
-                        src={`http://localhost:5000/${img.replace(/\\/g, "/")}`}
+                        src={`https://farmer-final-bkp2.onrender.com/${img.replace(/\\/g, "/")}`}
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 0.4 }}

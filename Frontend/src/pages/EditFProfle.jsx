@@ -23,7 +23,7 @@ const EditFProfile = () => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/users/${user._id || user.id}`,
+        `https://farmer-final-bkp2.onrender.com/api/users/${user._id || user.id}`,
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

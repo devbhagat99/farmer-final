@@ -55,7 +55,7 @@ const CropPredictionForm = () => {
       setLoading(true);
       setPredictionResult(null);
 
-      const response = await axios.get("http://localhost:5000/api/cropprediction", {
+      const response = await axios.get("https://farmer-final-bkp2.onrender.com/api/cropprediction", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
 

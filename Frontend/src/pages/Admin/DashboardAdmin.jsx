@@ -40,10 +40,10 @@ const Dashboard = () => {
       if (!token) return toast.error("Please login first!");
 
       const [usersRes, predictionRes] = await Promise.all([
-        axios.get("http://localhost:5000/api/users", {
+        axios.get("https://farmer-final-bkp2.onrender.com/api/users", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        axios.get("http://localhost:5000/api/cropprediction", {
+        axios.get("https://farmer-final-bkp2.onrender.com/api/cropprediction", {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
